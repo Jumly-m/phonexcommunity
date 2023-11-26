@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+/* @font-face{
+    font-family: 'phoenix':
+    src: local('CustomFont1Name'),
+    url('../Font')
+} */
+
+@font-face {
+  font-family: 'Phoenix';
+  src: url('../Font/Blazed.ttf'); /* Adjust the path as needed */
+}
+
+@font-face {
+  font-family: 'Phoenix2';
+  src: url('../Font/Blazed.ttf'); /* Adjust the path as needed */
+}
+
+
+.fade-in-on-scroll2 {
+  animation-name: slide-in-left;
+  animation-duration: 2.0s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 2;
+  animation-delay: 2s;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+    /* opacity: 0; */
+  }
+  100% {
+    transform: translateX(0);
+    /* opacity: 1; */
+  }
+}
+
+.fade-in-on-scroll {
+  animation-name: fade-in;
+  animation-duration: 2.0s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+.disp {
+  visibility: visible;
+}
+
+.disp2 {
+  visibility: hidden;
+}
+
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #250000;
+    color: #fff;
+    border: none;
+    border-radius: 10%;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+    /* Style when button is visible */
+    &.visible {
+      display: block;
+    }
+}
